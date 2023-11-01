@@ -36,12 +36,12 @@ const InfoDrawer = ({ open, setOpen, profile }) => {
 
     const handleClose = () => {
         setOpen(false);
-    };
+     };
 
     return (
         <Drawer
             open={open}
-            onClose={handleClose}
+             onClose={handleClose}
             PaperProps={{ sx: drawerStyle }}
             style={{ zIndex: 1500 }}
         >

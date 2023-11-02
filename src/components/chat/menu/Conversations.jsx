@@ -27,18 +27,18 @@ const Conversations = ({ text }) => {
     useEffect(() => {
         const fetchData = async () => {
             let data = await getUsers();
-           // let fiteredData = data.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
-            //setUsers(fiteredData);
+            let fiteredData = data.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
+            setUsers(fiteredData);
         }
         fetchData();
     }, [text]);
 
-    useEffect(() => {
-        socket.current.emit('addUser', account);
-        socket.current.on("getUsers", users => {
-            setActiveUsers(users);
-        })
-    }, [account])
+    // useEffect(() => {
+    //     socket.current.emit('addUser', account);
+    //     socket.current.on("getUsers", users => {
+    //         setActiveUsers(users);
+    //     })
+    // }, [account])
 
     return (
         <Component>

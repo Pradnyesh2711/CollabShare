@@ -89,6 +89,7 @@ const Messages = ({ person, conversation }) => {
                     type: 'text',
                     text: value
                 };
+                
             } else {
                 message = {
                     senderId: account.sub,
@@ -100,7 +101,7 @@ const Messages = ({ person, conversation }) => {
             }
 
             socket.current.emit('sendMessage', message);
-
+            console.log(message);
             await newMessages(message);
 
             setValue('');

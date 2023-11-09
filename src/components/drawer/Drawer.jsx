@@ -5,7 +5,7 @@ import { ArrowBack } from '@mui/icons-material';
 import Profile from './Profile';
 
 const Header = styled(Box)`
-  background: #008069;
+  background: blue;
   height: 107px;
   color: #FFFFFF;
   display: flex;
@@ -37,7 +37,7 @@ const InfoDrawer = ({ open, setOpen, profile }) => {
     const handleClose = () => {
         setOpen(false);
      };
-
+     
     return (
         <Drawer
             open={open}
